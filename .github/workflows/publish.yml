@@ -21,7 +21,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@69f6fc9d46f2f8bf0d5491e4aabe0bb8c6a4678a # renovate: tag=v4.0.1
         with:
-          images: swissgrc/azure-pipelines-azurecli
+          images: swissgrc/azure-pipelines-dotnet
           tags: |
             type=ref,event=tag
             type=ref,event=pr
