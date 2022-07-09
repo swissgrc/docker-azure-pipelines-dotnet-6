@@ -19,7 +19,7 @@ ENV CACERTIFICATES_VERSION=20210119
 # renovate: datasource=repology depName=debian_11/lsb-release versioning=loose
 ENV LSBRELEASE_VERSION=11.1.0
 # renovate: datasource=repology depName=debian_11/gnupg2 versioning=loose
-ENV GNUPG_VERSION=2.2.27-2+deb11u1
+ENV GNUPG_VERSION=2.2.27-2+deb11u2
 
 RUN apt-get update -y && \
   apt-get install -y --no-install-recommends ca-certificates=${CACERTIFICATES_VERSION} curl=${CURL_VERSION} lsb-release=${LSBRELEASE_VERSION} gnupg=${GNUPG_VERSION} && \
