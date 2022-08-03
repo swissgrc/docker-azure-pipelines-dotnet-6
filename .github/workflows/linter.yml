@@ -43,7 +43,7 @@ jobs:
       # Run Linter against code base #
       ################################
       - name: Lint Code Base
-        uses: github/super-linter/slim@a320804d310fdeb8d1a46c6c6c1e615d443b10c9 # renovate: tag=v4.9.4
+        uses: github/super-linter/slim@01d3218744765b55c3b5ffbb27e50961e50c33c5 # tag=v4.9.6
         env:
           VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: develop
