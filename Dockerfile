@@ -11,7 +11,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 # Install Docker CLI
 
 # renovate: datasource=github-tags depName=docker/cli extractVersion=^v(?<version>.*)$
-ENV DOCKERCLI_VERSION=20.10.17
+ENV DOCKERCLI_VERSION=20.10.18
 # renovate: datasource=repology depName=debian_11/curl versioning=loose
 ENV CURL_VERSION=7.74.0-1.3+deb11u2
 # renovate: datasource=repology depName=debian_11/ca-certificates versioning=loose
