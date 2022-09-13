@@ -1,4 +1,4 @@
-FROM debian:11.3-slim
+FROM debian:11.5-slim
 
 LABEL org.opencontainers.image.vendor="Swiss GRC AG"
 LABEL org.opencontainers.image.authors="Swiss GRC AG <opensource@swissgrc.com>"
@@ -11,9 +11,9 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 # Install Docker CLI
 
 # renovate: datasource=github-tags depName=docker/cli extractVersion=^v(?<version>.*)$
-ENV DOCKERCLI_VERSION=20.10.17
+ENV DOCKERCLI_VERSION=20.10.18
 # renovate: datasource=repology depName=debian_11/curl versioning=loose
-ENV CURL_VERSION=7.74.0-1.3+deb11u2
+ENV CURL_VERSION=7.74.0-1.3+deb11u3
 # renovate: datasource=repology depName=debian_11/ca-certificates versioning=loose
 ENV CACERTIFICATES_VERSION=20210119
 # renovate: datasource=repology depName=debian_11/lsb-release versioning=loose
@@ -36,7 +36,7 @@ RUN apt-get update -y && \
 # Install .NET 6
 
 # renovate: datasource=github-tags depName=dotnet/sdk extractVersion=^v(?<version>.*)$
-ENV DOTNET_VERSION=6.0.400
+ENV DOTNET_VERSION=6.0.401
 
 ENV \
     # Do not show first run text
