@@ -12,13 +12,13 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # renovate: datasource=github-tags depName=docker/cli extractVersion=^v(?<version>.*)$
 ENV DOCKERCLI_VERSION=20.10.18
-# renovate: datasource=repology depName=debian_11/curl versioning=loose
+#Disabled renovate: datasource=repology depName=debian_11/curl versioning=loose
 ENV CURL_VERSION=7.74.0-1.3+deb11u3
-# renovate: datasource=repology depName=debian_11/ca-certificates versioning=loose
+#Disabled renovate: datasource=repology depName=debian_11/ca-certificates versioning=loose
 ENV CACERTIFICATES_VERSION=20210119
-# renovate: datasource=repology depName=debian_11/lsb-release versioning=loose
+#Disabled renovate: datasource=repology depName=debian_11/lsb-release versioning=loose
 ENV LSBRELEASE_VERSION=11.1.0
-# renovate: datasource=repology depName=debian_11/gnupg2 versioning=loose
+#Disabled renovate: datasource=repology depName=debian_11/gnupg2 versioning=loose
 ENV GNUPG_VERSION=2.2.27-2+deb11u2
 
 RUN apt-get update -y && \
