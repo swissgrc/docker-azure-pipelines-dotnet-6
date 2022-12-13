@@ -35,7 +35,7 @@ The following example shows the container used for a deployment step which shows
 
 | Tag        | Description                                                                                     | Base Image       | Docker CLI | .NET SDK | Size                                                                                                                             |
 |------------|-------------------------------------------------------------------------------------------------|------------------|------------|----------|----------------------------------------------------------------------------------------------------------------------------------|
-| latest     | Latest stable release (from `main` branch)                                                      | debian:11.5-slim | 20.10.21   | 6.0.403  | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-dotnet/latest?style=flat-square)    |
+| latest     | Latest stable release (from `main` branch)                                                      | debian:11.5-slim | 20.10.21   | 6.0.404  | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-dotnet/latest?style=flat-square)    |
 | unstable   | Latest unstable release (from `develop` branch)                                                 | debian:11.5-slim | 20.10.21   | 6.0.404  | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-dotnet/unstable?style=flat-square)  |
 | 6.0.301    | [.NET SDK 6.0.301](https://github.com/dotnet/core/blob/main/release-notes/6.0/6.0.6/6.0.6.md)   | debian:11.3-slim | 20.10.17   | 6.0.301  | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-dotnet/6.0.301?style=flat-square)   |
 | 6.0.302    | [.NET SDK 6.0.302](https://github.com/dotnet/core/blob/main/release-notes/6.0/6.0.7/6.0.7.md)   | debian:11.3-slim | 20.10.17   | 6.0.302  | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-dotnet/6.0.302?style=flat-square)   |
@@ -44,6 +44,7 @@ The following example shows the container used for a deployment step which shows
 | 6.0.401    | [.NET SDK 6.0.401](https://github.com/dotnet/core/blob/main/release-notes/6.0/6.0.9/6.0.9.md)   | debian:11.5-slim | 20.10.18   | 6.0.401  | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-dotnet/6.0.401?style=flat-square)   |
 | 6.0.402    | [.NET SDK 6.0.402](https://github.com/dotnet/core/blob/main/release-notes/6.0/6.0.10/6.0.10.md) | debian:11.5-slim | 20.10.18   | 6.0.402  | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-dotnet/6.0.402?style=flat-square)   |
 | 6.0.403    | [.NET SDK 6.0.403](https://github.com/dotnet/core/blob/main/release-notes/6.0/6.0.11/6.0.11.md) | debian:11.5-slim | 20.10.21   | 6.0.403  | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-dotnet/6.0.402?style=flat-square)   |
+| 6.0.404    | [.NET SDK 6.0.404](https://github.com/dotnet/core/blob/main/release-notes/6.0/6.0.12/6.0.12.md) | debian:11.5-slim | 20.10.21   | 6.0.404  | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-dotnet/6.0.404?style=flat-square)   |
 
 ### Configuration
 
