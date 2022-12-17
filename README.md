@@ -36,7 +36,7 @@ The following example shows the container used for a deployment step which shows
 | Tag        | Description                                                                                     | Base Image       | Docker CLI | .NET SDK | Size                                                                                                                             |
 |------------|-------------------------------------------------------------------------------------------------|------------------|------------|----------|----------------------------------------------------------------------------------------------------------------------------------|
 | latest     | Latest stable release (from `main` branch)                                                      | debian:11.5-slim | 20.10.21   | 6.0.404  | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-dotnet/latest?style=flat-square)    |
-| unstable   | Latest unstable release (from `develop` branch)                                                 | debian:11.5-slim | 20.10.21   | 6.0.404  | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-dotnet/unstable?style=flat-square)  |
+| unstable   | Latest unstable release (from `develop` branch)                                                 | debian:11.5-slim | 20.10.22   | 6.0.404  | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-dotnet/unstable?style=flat-square)  |
 | 6.0.301    | [.NET SDK 6.0.301](https://github.com/dotnet/core/blob/main/release-notes/6.0/6.0.6/6.0.6.md)   | debian:11.3-slim | 20.10.17   | 6.0.301  | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-dotnet/6.0.301?style=flat-square)   |
 | 6.0.302    | [.NET SDK 6.0.302](https://github.com/dotnet/core/blob/main/release-notes/6.0/6.0.7/6.0.7.md)   | debian:11.3-slim | 20.10.17   | 6.0.302  | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-dotnet/6.0.302?style=flat-square)   |
 | 6.0.302.1  | [.NET SDK 6.0.302](https://github.com/dotnet/core/blob/main/release-notes/6.0/6.0.7/6.0.7.md)   | debian:11.3-slim | 20.10.17   | 6.0.302  | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-dotnet/6.0.302.1?style=flat-square) |
@@ -52,7 +52,7 @@ These environment variables are supported:
 
 | Environment variable   | Default value        | Description                                                      |
 |------------------------|----------------------|------------------------------------------------------------------|
-| DOCKERCLI_VERSION      | `20.10.21`           | Version of Docker CLI installed in the image.                    |
+| DOCKERCLI_VERSION      | `20.10.22`           | Version of Docker CLI installed in the image.                    |
 | DOTNET_VERSION         | `6.0.404`            | Version of .NET installed in the image.                          |
 | CACERTIFICATES_VERSION | `20210119`           | Version of `ca-certificates` package used to install components. |
 | CURL_VERSION           | `7.74.0-1.3+deb11u3` | Version of `curl` package used to install components.            |
