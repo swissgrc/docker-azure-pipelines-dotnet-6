@@ -13,7 +13,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 # renovate: datasource=github-tags depName=docker/cli extractVersion=^v(?<version>.*)$
 ENV DOCKERCLI_VERSION=20.10.22
 #Disabled renovate: datasource=repology depName=debian_11/curl versioning=loose
-ENV CURL_VERSION=7.74.0-1.3+deb11u3
+ENV CURL_VERSION=7.74.0-1.3+deb11u5
 #Disabled renovate: datasource=repology depName=debian_11/ca-certificates versioning=loose
 ENV CACERTIFICATES_VERSION=20210119
 #Disabled renovate: datasource=repology depName=debian_11/lsb-release versioning=loose
