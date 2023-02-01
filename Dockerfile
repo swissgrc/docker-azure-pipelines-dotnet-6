@@ -61,12 +61,13 @@ COPY --from=build /etc/apt/keyrings/ /etc/apt/keyrings
 COPY --from=build /etc/apt/trusted.gpg.d/ /etc/apt/trusted.gpg.d
 COPY --from=build /etc/apt/sources.list.d/ /etc/apt/sources.list.d
 
-# #Disabled renovate: datasource=repology depName=debian_11/git versioning=loose
-ENV GIT_VERSION=1:2.30.2-1
+#Disabled renovate: datasource=repology depName=debian_11_backports/git versioning=loose
+ENV GIT_VERSION=1:2.39.1-0.1~bpo11+1
 
-RUN apt-get update -y && \
+RUN echo "deb http://deb.debian.org/debian bullseye-backports main" | tee /etc/apt/sources.list.d/bullseye-backports.list && \
+  apt-get update -y && \
   # Install Git
-  apt-get install -y --no-install-recommends git=${GIT_VERSION} && \
+  apt-get install -y --no-install-recommends -t bullseye-backports git=${GIT_VERSION} && \
   # Clean up
   apt-get clean && \
   rm -rf /var/lib/apt/lists/* && \
