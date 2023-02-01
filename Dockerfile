@@ -31,6 +31,8 @@ ENV GNUPG_VERSION=2.2.27-2+deb11u2
 RUN apt-get update -y && \
   # Install necessary dependencies
   apt-get install -y --no-install-recommends curl=${CURL_VERSION} lsb-release=${LSBRELEASE_VERSION} gnupg=${GNUPG_VERSION} && \
+  # Add Git LFS PPA
+  curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash && \
   # Add Dockers public key
   mkdir -p /etc/apt/keyrings && \
   curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg && \
@@ -53,11 +55,38 @@ LABEL org.opencontainers.image.documentation="https://github.com/swissgrc/docker
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 WORKDIR /
-# Copy Docker keyring
+# Copy Docker & Git LFS keyring
 COPY --from=build /etc/apt/keyrings/ /etc/apt/keyrings
 # Copy .NET keyring
 COPY --from=build /etc/apt/trusted.gpg.d/ /etc/apt/trusted.gpg.d
 COPY --from=build /etc/apt/sources.list.d/ /etc/apt/sources.list.d
+
+#Disabled renovate: datasource=repology depName=debian_11_backports/git versioning=loose
+ENV GIT_VERSION=1:2.39.1-0.1~bpo11+1
+
+RUN echo "deb http://deb.debian.org/debian bullseye-backports main" | tee /etc/apt/sources.list.d/bullseye-backports.list && \
+  apt-get update -y && \
+  # Install Git
+  apt-get install -y --no-install-recommends -t bullseye-backports git=${GIT_VERSION} && \
+  # Clean up
+  apt-get clean && \
+  rm -rf /var/lib/apt/lists/* && \
+  # Smoke test
+  git version
+
+# Install Git LFS
+
+# renovate: datasource=github-tags depName=git-lfs/git-lfs extractVersion=^v(?<version>.*)$
+ENV GITLFS_VERSION=3.3.0
+
+RUN apt-get update -y && \
+  # Install Git LFS
+  apt-get install -y --no-install-recommends git-lfs=${GITLFS_VERSION}  && \
+  # Clean up
+  apt-get clean && \
+  rm -rf /var/lib/apt/lists/* && \
+  # Smoke test
+  git lfs version
 
 # Install Docker CLI
 
