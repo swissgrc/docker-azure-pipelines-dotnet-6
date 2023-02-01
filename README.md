@@ -47,17 +47,4 @@ The following example shows the container used for a deployment step which shows
 | 6.0.404    | [.NET SDK 6.0.404](https://github.com/dotnet/core/blob/main/release-notes/6.0/6.0.12/6.0.12.md) | debian:11.5-slim | 20.10.21   | 6.0.404  | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-dotnet/6.0.404?style=flat-square)   |
 | 6.0.405    | [.NET SDK 6.0.405](https://github.com/dotnet/core/blob/main/release-notes/6.0/6.0.13/6.0.13.md) | debian:11.6-slim | 20.10.22   | 6.0.405  | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-dotnet/6.0.405?style=flat-square)   |
 
-### Configuration
-
-These environment variables are supported:
-
-| Environment variable   | Default value        | Description                                                      |
-|------------------------|----------------------|------------------------------------------------------------------|
-| DOCKERCLI_VERSION      | `20.10.22`           | Version of Docker CLI installed in the image.                    |
-| DOTNET_VERSION         | `6.0.405`            | Version of .NET installed in the image.                          |
-| CACERTIFICATES_VERSION | `20210119`           | Version of `ca-certificates` package used to install components. |
-| CURL_VERSION           | `7.74.0-1.3+deb11u5` | Version of `curl` package used to install components.            |
-| LSBRELEASE_VERSION     | `11.1.0`             | Version of `lsb-release` package used to install components.     |
-| GNUPG_VERSION          | `2.2.27-2+deb11u2`   | Version of `gnupg` package used to install components.           |
-
 [Azure Pipelines container jobs]: https://docs.microsoft.com/en-us/azure/devops/pipelines/process/container-phases
