@@ -7,6 +7,6 @@ on:
 jobs:
   lint-image:
     name: Lint Code Base
-    uses: swissgrc/.github/.github/workflows/lint-image.yml@64300ea603ac439c79d240c6cc89cd9f0268dcbb
+    uses: swissgrc/.github/.github/workflows/lint-image.yml@main
     secrets:
       gh-token: ${{ secrets.GITHUB_TOKEN }}
