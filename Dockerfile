@@ -105,7 +105,7 @@ RUN apt-get update -y && \
 # Install .NET 6
 
 # renovate: datasource=github-tags depName=dotnet/sdk extractVersion=^v(?<version>.*)$
-ENV DOTNET_VERSION=6.0.405
+ENV DOTNET_VERSION=6.0.406
 
 ENV \
     # Do not show first run text
