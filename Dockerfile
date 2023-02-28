@@ -22,7 +22,7 @@ FROM base AS build
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # renovate: datasource=repology depName=debian_11/curl versioning=loose
-ENV CURL_VERSION=7.74.0-1.3+deb11u5
+ENV CURL_VERSION=7.74.0-1.3+deb11u7
 # renovate: datasource=repology depName=debian_11/lsb-release versioning=loose
 ENV LSBRELEASE_VERSION=11.1.0
 # renovate: datasource=repology depName=debian_11/gnupg2 versioning=loose
