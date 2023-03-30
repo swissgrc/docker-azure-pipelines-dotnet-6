@@ -11,7 +11,7 @@ on:
 jobs:
   publish-image:
     name: Build and push Docker image
-    uses: swissgrc/.github/.github/workflows/publish-image.yml@main
+    uses: swissgrc/.github/.github/workflows/publish-image.yml@fix/trivy-image-ref-error
     with:
       image-name: swissgrc/azure-pipelines-dotnet
     secrets:
