@@ -64,7 +64,7 @@ COPY --from=build /etc/apt/sources.list.d/ /etc/apt/sources.list.d
 # renovate: datasource=repology depName=debian_11_backports/git versioning=loose
 ENV GIT_VERSION=1:2.39.2-1~bpo11+1
 
-RUN echo "deb http://deb.debian.org/debian bullseye-backports main" | tee /etc/apt/sources.list.d/bullseye-backports.list && \
+RUN echo "deb https://deb.debian.org/debian bullseye-backports main" | tee /etc/apt/sources.list.d/bullseye-backports.list && \
   apt-get update -y && \
   # Install Git
   apt-get install -y --no-install-recommends -t bullseye-backports git=${GIT_VERSION} && \
