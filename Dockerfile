@@ -1,5 +1,5 @@
 # Base image containing dependencies used in builder and final image
-FROM debian:11.6-slim AS base
+FROM debian:11.7-slim AS base
 
 # Make sure to fail due to an error at any stage in shell pipes
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
