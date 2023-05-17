@@ -108,6 +108,13 @@ RUN apt-get update -y && \
   docker buildx version && \
   docker compose version
 
+# Add Docker plugins to path
+ENV PATH="$PATH:/usr/libexec/docker/cli-plugins"
+# Smoke test
+RUN echo $PATH && \
+  docker-buildx version && \
+  docker-compose version
+
 # Install .NET 6
 
 # renovate: datasource=github-tags depName=dotnet/sdk extractVersion=^v(?<version>.*)$
