@@ -94,10 +94,12 @@ RUN apt-get update -y && \
 ENV DOCKERCLI_VERSION=24.0.0
 # renovate: datasource=github-tags depName=docker/buildx extractVersion=^v(?<version>.*)$
 ENV DOCKERBUILDX_VERSION=0.10.4
+# renovate: datasource=github-tags depName=docker/compose extractVersion=^v(?<version>.*)$
+ENV DOCKERCOMPOSE_VERSION=2.17.3
 
 RUN apt-get update -y && \
   # Install Docker CLI
-  apt-get install -y --no-install-recommends docker-ce-cli=5:${DOCKERCLI_VERSION}-1~debian.11~bullseye docker-buildx-plugin=${DOCKERBUILDX_VERSION}-1~debian.11~bullseye && \
+  apt-get install -y --no-install-recommends docker-ce-cli=5:${DOCKERCLI_VERSION}-1~debian.11~bullseye docker-buildx-plugin=${DOCKERBUILDX_VERSION}-1~debian.11~bullseye docker-compose-plugin=${DOCKERCOMPOSE_VERSION}-1~debian.11~bullseye && \
   # Clean up
   apt-get clean && \
   rm -rf /var/lib/apt/lists/* && \
