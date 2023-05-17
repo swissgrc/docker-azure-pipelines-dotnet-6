@@ -104,7 +104,9 @@ RUN apt-get update -y && \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/* && \
   # Smoke test
-  docker --version
+  docker --version && \
+  docker buildx version && \
+  docker compose version
 
 # Install .NET 6
 
