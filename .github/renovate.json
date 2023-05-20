@@ -2,5 +2,12 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "github>swissgrc/renovate-presets:docker"
+  ],
+  "packageRules": [
+    {
+      "matchDepNames": [ "dotnet/sdk" ],
+      "description": "No .NET SDK Major Updates",      
+      "extends": [ ":disableMajorUpdates" ]
+    }
   ]
 }
