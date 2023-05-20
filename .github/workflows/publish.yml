@@ -14,6 +14,7 @@ jobs:
     uses: swissgrc/.github/.github/workflows/publish-image.yml@main
     with:
       image-name: swissgrc/azure-pipelines-dotnet
+      latest-tag: false
     secrets:
       gh-token: ${{ secrets.GITHUB_TOKEN }}
       docker-username: ${{ secrets.DOCKER_USERNAME }}
