@@ -118,7 +118,7 @@ RUN echo $PATH && \
 # Install .NET 6
 
 # renovate: datasource=github-tags depName=dotnet/sdk extractVersion=^v(?<version>.*)$
-ENV DOTNET_VERSION=6.0.408
+ENV DOTNET_VERSION=7.0.302
 
 ENV \
     # Do not show first run text
