@@ -16,7 +16,8 @@ jobs:
       image-name: swissgrc/azure-pipelines-dotnet
       default-latest-tag: false
       additional-latest-tag-name: 6
-      unstable-tag-name: 6-unstable
+      default-unstable-tag: false
+      additional-unstable-tag-name: 6-unstable
     secrets:
       gh-token: ${{ secrets.GITHUB_TOKEN }}
       docker-username: ${{ secrets.DOCKER_USERNAME }}
