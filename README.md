@@ -52,5 +52,6 @@ The following example shows the container used for a deployment step which shows
 | 6.0.410    | [.NET SDK 6.0.410](https://github.com/dotnet/core/blob/main/release-notes/6.0/6.0.18/6.0.18.md) | azure-pipelines-git:2.39.2 | 6.0.410  | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-dotnet/6.0.410?style=flat-square)    |
 | 6.0.411    | [.NET SDK 6.0.411](https://github.com/dotnet/core/blob/main/release-notes/6.0/6.0.19/6.0.19.md) | azure-pipelines-git:2.39.2 | 6.0.411  | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-dotnet/6.0.411?style=flat-square)    |
 | 6.0.412    | [.NET SDK 6.0.412](https://github.com/dotnet/core/blob/main/release-notes/6.0/6.0.20/6.0.20.md) | azure-pipelines-git:2.39.2 | 6.0.412  | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-dotnet/6.0.412?style=flat-square)    |
+| 6.0.413    | [.NET SDK 6.0.413](https://github.com/dotnet/core/blob/main/release-notes/6.0/6.0.21/6.0.21.md) | azure-pipelines-git:2.39.2 | 6.0.413  | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-dotnet/6.0.413?style=flat-square)    |
 
 [Azure Pipelines container jobs]: https://docs.microsoft.com/en-us/azure/devops/pipelines/process/container-phases
