@@ -8,7 +8,7 @@ FROM base AS build
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # renovate: datasource=repology depName=debian_11/curl versioning=loose
-ENV CURL_VERSION=7.74.0-1.3+deb11u10
+ENV CURL_VERSION=7.74.0-1.3+deb11u9
 
 RUN apt-get update -y && \
   # Install necessary dependencies
