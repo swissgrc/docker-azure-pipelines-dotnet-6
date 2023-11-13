@@ -1,5 +1,5 @@
 # Base image containing dependencies used in builder and final image
-FROM ghcr.io/swissgrc/azure-pipelines-git:2.39.2 AS base
+FROM ghcr.io/swissgrc/azure-pipelines-git:2.42.0 AS base
 
 # Builder image
 FROM base AS build
@@ -7,14 +7,14 @@ FROM base AS build
 # Make sure to fail due to an error at any stage in shell pipes
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
-# renovate: datasource=repology depName=debian_11/curl versioning=loose
-ENV CURL_VERSION=7.74.0-1.3+deb11u9
+# renovate: datasource=repology depName=debian_12/curl versioning=loose
+ENV CURL_VERSION=7.88.1-10+deb12u4
 
 RUN apt-get update -y && \
   # Install necessary dependencies
   apt-get install -y --no-install-recommends curl=${CURL_VERSION} && \
   # Add .NET PPA
-  curl -o /tmp/packages-microsoft-prod.deb https://packages.microsoft.com/config/debian/11/packages-microsoft-prod.deb && \
+  curl -o /tmp/packages-microsoft-prod.deb https://packages.microsoft.com/config/debian/12/packages-microsoft-prod.deb && \
   dpkg -i /tmp/packages-microsoft-prod.deb && \
   rm -rf /tmp/*
 
@@ -31,13 +31,13 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 WORKDIR /
 # Copy .NET keyring
-COPY --from=build /etc/apt/trusted.gpg.d/ /etc/apt/trusted.gpg.d
+COPY --from=build /usr/share/keyrings/microsoft-prod.gpg /usr/share/keyrings/microsoft-prod.gpg
 COPY --from=build /etc/apt/sources.list.d/ /etc/apt/sources.list.d
 
 # Install .NET 6
 
 # renovate: datasource=github-tags depName=dotnet/sdk extractVersion=^v(?<version>.*)$
-ENV DOTNET_VERSION=6.0.415
+ENV DOTNET_VERSION=6.0.416
 
 ENV \
     # Do not show first run text
