@@ -37,7 +37,7 @@ COPY --from=build /etc/apt/sources.list.d/ /etc/apt/sources.list.d
 # Install .NET 6
 
 # renovate: datasource=github-tags depName=dotnet/sdk extractVersion=^v(?<version>.*)$
-ENV DOTNET_VERSION=6.0.416
+ENV DOTNET_VERSION=6.0.417
 
 ENV \
     # Do not show first run text
