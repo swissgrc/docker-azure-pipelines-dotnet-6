@@ -1,5 +1,5 @@
 # Base image containing dependencies used in builder and final image
-FROM ghcr.io/swissgrc/azure-pipelines-git:2.45.2 AS base
+FROM ghcr.io/swissgrc/azure-pipelines-git:2.46.0 AS base
 
 # Builder image
 FROM base AS build
