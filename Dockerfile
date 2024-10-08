@@ -1,5 +1,5 @@
 # Base image containing dependencies used in builder and final image
-FROM ghcr.io/swissgrc/azure-pipelines-git:2.46.0 AS base
+FROM ghcr.io/swissgrc/azure-pipelines-git:2.47.0 AS base
 
 # Builder image
 FROM base AS build
@@ -31,7 +31,7 @@ COPY --from=build /etc/apt/sources.list.d/ /etc/apt/sources.list.d
 # Install .NET 6
 
 # renovate: datasource=github-tags depName=dotnet/sdk extractVersion=^v(?<version>.*)$
-ENV DOTNET_VERSION=6.0.425
+ENV DOTNET_VERSION=6.0.427
 
 ENV \
     # Do not show first run text
